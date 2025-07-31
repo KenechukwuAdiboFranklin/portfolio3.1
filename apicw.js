@@ -1,5 +1,5 @@
 const getAllProducts = async() => {
-    const containers = document.querySelectorAll("#product-list");
+    const containers = document.querySelectorAll(".product-list");
     const response = await fetch("https://newsapi.org/v2/everything?q=apple&from=2025-07-29&to=2025-07-29&sortBy=popularity&apiKey=009860c72acc49a68a5d5024d0b54150");
     const data = await response.json();
 
@@ -30,7 +30,7 @@ const getAllProducts = async() => {
     });
 
     // Wait for all images to load
-    const images = document.querySelectorAll("#product-list img");
+    const images = document.querySelectorAll(".product-list img");
     let loadedCount = 0;
 
     images.forEach((img) => {
